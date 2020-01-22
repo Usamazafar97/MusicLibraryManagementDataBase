@@ -1,5 +1,7 @@
 # MusicLibraryManagementDataBase
 
+Important Note : You First have to run the LibraryManager.java file (to make Database in MySQL) and then TestDB2 file (for creating tables and futher queries )
+
 For Further details please read the InstructionsAndObjectives  wordfile
 
 For DataBase : MySQL
@@ -18,17 +20,13 @@ There will be a single Library which contains collections of Albums, Songs, and 
 
 RequirmentNo	Description
 
-R1	View a list of all the songs in the library and see information about each song, including the album on which it appears and the artist(s) who
-
-performed it.
+R1	View a list of all the songs in the library and see information about each song, including the album on which it appears and the artist(s) who performed it.
 
 R1.1	View a list of all the artists in the library.
 
 R1.2	View a list of all the albums in the library.
 
-R3	Edit any information in the library. This includes changing the title of
-
-songs and albums and changing the names of artists.
+R3	Edit any information in the library. This includes changing the title of songs and albums and changing the names of artists.
 
 R4	View a list of all the songs by a particular artist.
 
@@ -45,10 +43,6 @@ R8	Add songs to and remove them from albums.
 Design
 
 
-
-
-
-
 Each instance of the Song class will correspond to a unique file on disk and will store the following pieces of information:
 
 oThe path to the file on disk
@@ -58,14 +52,12 @@ oThe title of the song
 oThe duration of the song
 
 oThe track number
+
 Each instance of the Artist class will store the name of a person (eg. "Lucinda Williams") or group (eg. "Ben Harper & the Innocent Criminals", "Radiohead") that performs Songs. There will be no distinction between groups and individual people.
 
 Each instance of the Album class will represent an album - a collection of Songs ordered by track number (where each song on an album has a different track number) - and will store the album title. In addition, there will be at least one album in the system at all times (a "default" album) and every song will be associated with exactly one album as shown above. Any song for which the user has not entered an album will belong to the default album.
 
 There will be a single instance of the Library class in the system which will maintain collections of the other three classes and provide methods to create and destroy them that ensure consistency between the library and the songs, artists, and albums.
-
-
-
 
 Each class will also implement the associations depicted above.
 
@@ -73,10 +65,7 @@ oThe track number
 Code
 
 
-
-
 In addition to everything stated above, you should keep the following in mind while writing code:
-
 
 
 When editing information in the library or adding songs, users of your program will specify Artists and Albums by entering their names/titles.
@@ -84,7 +73,6 @@ In addition to everything stated above, you should keep the following in mind wh
 We assume the path to songs will not change, that is, if the user renamed or moved a file they would need to  remove  the  corresponding Song from  the Library and  create  a  new Song.
 
 The library will not be allowed to contain two Albums with the same title, two Artists with the same name, or two Songs representing the same file.
-
 
 Any method that returns a collection of Albums should return them in alphabetical order by title.
 
